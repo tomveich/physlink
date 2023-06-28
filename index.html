@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhysLink</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script type="module" src="/assets/physlink.js"></script>
+</head>
+<body>
+
+    <form id="controls">
+        <div class="logo" style="display: flex; gap: 0.5rem;">
+            <img src="./assets/logo.svg" alt="Logo">
+        <div>
+                <h1>Physlink</h1>
+            </div>
+        </div>
+        <label for="start">
+            Start
+            <input type="number" name="start" id="start" value="1" required>
+        </label>
+        <label for="amount">
+            Amount (pcs)
+            <input type="number" name="amount" id="amount" value="72" required>
+        </label>
+        <label for="prefix">
+            Prefix
+            <input type="text" name="prefix" id="prefix" value="A" maxlength="1">
+        </label>
+        <label for="group_by">
+            Group by (pcs)
+            <input type="number" name="group_by" id="group_by" value="12" required>
+        </label>
+        
+        <label for="code_type">
+            Code type
+            <select id="code_type" required>
+                <option value="datamatrix">Datamatrix</option>
+                <option value="barcode39">Barcode 39</option>
+            </select>
+        </label>
+        <label for="generate">
+            Action
+            <button type="submit" id="generate">Generate</button>
+        </label>
+        <label for="hidecontrols">
+            Controls
+            <button id="hidecontrols">Hide</button>
+        </label>
+    </form>
+    <div id="content">
+        <div class="octet">
+
+            <print-card>
+                <span class="barcode">0001</span>
+                <span class="logo">physlink.oli.cx</span>
+            </print-card>
+            <print-card class="datamatrix"><svg viewBox="0 0 10 10" width="256" height="256" fill="#000" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" version="1.1"><path transform="matrix(1,0,0,1,0,0)" d="M0,9h10v1h-10v-1zM7,8h2v1h-2v-1zM0,8h3v1h-3v-1zM9,7h1v1h-1v-1zM7,7h1v1h-1v-1zM2,7h2v1h-2v-1zM0,7h1v1h-1v-1zM6,6h3v1h-3v-1zM2,6h3v1h-3v-1zM0,6h1v1h-1v-1zM8,5h2v1h-2v-1zM5,5h2v1h-2v-1zM2,5h1v1h-1v-1zM0,5h1v1h-1v-1zM3,4h2v1h-2v-1zM0,4h1v1h-1v-1zM8,3h2v1h-2v-1zM3,3h1v1h-1v-1zM0,3h2v1h-2v-1zM5,2h2v1h-2v-1zM0,2h3v1h-3v-1zM5,1h5v1h-5v-1zM0,1h1v1h-1v-1zM8,0h1v1h-1v-1zM6,0h1v1h-1v-1zM4,0h1v1h-1v-1zM2,0h1v1h-1v-1zM0,0h1v1h-1v-1z"></path></svg></print-card>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
