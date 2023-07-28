@@ -7,7 +7,7 @@
     <title>PhysLink</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
     <script type="module" src="/assets/physlink.js"></script>
 </head>
@@ -32,6 +32,12 @@
             Prefix
             <input type="text" name="prefix" id="prefix" value="A" maxlength="1">
         </label>
+        <label for="visible_prefix">
+            <span><input type="checkbox" name="visible_prefix" id="visible_prefix" value="true">Visible prefix</span>
+        </label>
+        <label for="visible_number">
+            <span><input type="checkbox" name="visible_number" id="visible_number" value="true">Visible number</span>
+        </label>
         <label for="group_by">
             Group by (pcs)
             <input type="number" name="group_by" id="group_by" value="12" required>
@@ -43,6 +49,9 @@
                 <option value="datamatrix">Datamatrix</option>
                 <option value="barcode39">Barcode 39</option>
             </select>
+        </label>
+        <label for="visible_ad">
+            <span><input type="checkbox" name="visible_ad" id="visible_ad" value="true">Include ad</span>
         </label>
         <label for="generate">
             Action
