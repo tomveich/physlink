@@ -20,7 +20,7 @@ const amount_input = document.querySelector("#amount");
 const generate_btn = document.querySelector("#generate");
 const hidecontrols_btn = document.querySelector("#hidecontrols");
 
-const adText = "Physlink"
+const adText = "PHYSLINK"
 
 controls.addEventListener("submit", e => {
     e.preventDefault();
@@ -92,7 +92,7 @@ function createBarcode39(prefix, num, prefixVisible, numberVisible, adVisible) {
     if(adVisible) {
         const logo = document.createElement("span");
         logo.classList.add("logo");
-        logo.innerText = adText;
+        logo.innerHTML = adText;
         card.appendChild(logo);
     }
 
@@ -118,7 +118,7 @@ function createDataMatrix(prefix, num, prefixVisible, numberVisible, adVisible) 
     if(adVisible) {
         const logo = document.createElement("span");
         logo.classList.add("logo");
-        logo.innerText = adText;
+        logo.innerHTML = adText;
         card.appendChild(logo);
     }
 
