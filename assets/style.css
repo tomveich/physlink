@@ -30,6 +30,11 @@ body {
     print-card {
       break-inside: avoid;
     }
+
+    #controls {
+        display: none !important;
+
+    }
 }
 
 print-card {
@@ -57,7 +62,7 @@ print-card {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 0.5cm;
+    margin-bottom: 0.3cm;
 }
 
 .barcode {
@@ -70,9 +75,34 @@ print-card {
 
 .logo {
     font-size: 2.5mm;
-    text-align: center;
     line-height: 1em;
     margin-top: 1mm;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    > img {
+        height: 5em;
+        border-radius: 5px;
+    }
+
+    > h1 {
+        display: flex;
+        flex-direction: column;
+        
+        > span {
+            &:first-child {
+                line-height: 1.4em;
+            }
+            &:last-child {
+                color: gray;
+                text-transform: uppercase;
+                font-size: 0.5em;
+                letter-spacing: 3px;
+            }
+        }
+    }
 }
 
 .human_readable_part {
@@ -82,17 +112,33 @@ print-card {
 
 #controls {
     font-size: 1rem;
+
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
     gap: 1rem;
-    padding-bottom: 5mm;
-}
+    padding: 1rem;
 
-#controls > .logo {
+
     width: 100%;
+
+    > .form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+
+        > .group {
+            border: 2px solid seagreen;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+    }
+
+
 }
 
+h2 {
+    color: seagreen;
+}
 
 
 input, select, button {

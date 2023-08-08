@@ -18,7 +18,6 @@ const group_by = document.querySelector("#group_by");
 const start_input = document.querySelector("#start");
 const amount_input = document.querySelector("#amount");
 const generate_btn = document.querySelector("#generate");
-const hidecontrols_btn = document.querySelector("#hidecontrols");
 
 const adText = "PHYSLINK"
 
@@ -71,9 +70,7 @@ controls.addEventListener("submit", e => {
 
 });
 
-hidecontrols_btn.addEventListener("click", e => {
-    controls.style.display = "none";
-});
+
 
 function createBarcode39(prefix, num, prefixVisible, numberVisible, adVisible) {
     const card = document.createElement("print-card");
